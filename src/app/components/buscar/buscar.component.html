@@ -1,0 +1,21 @@
+<h1>Buscando: <small> <b>{{termino}}</b></small></h1>
+<hr>
+
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info">
+
+      No existen resusltados con el termino: {{termino}}
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Reecibir infomracion de un componente hijo -->
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn fast">
+
+  <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes;"></app-heroe-tarjeta>
+  
+  </div>

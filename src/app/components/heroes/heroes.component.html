@@ -1,0 +1,11 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+
+
+
+<!-- Reecibir infomracion de un componente hijo -->
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn fast">
+
+<app-heroe-tarjeta (hereoSeleccionado)="verHeroe( $event)" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+
+</div>
